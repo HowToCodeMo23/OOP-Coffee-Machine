@@ -6,7 +6,7 @@ from money_machine import MoneyMachine
 
 menu = Menu()
 process = CoffeeMaker()
-money = MoneyMachine()
+manu = MoneyMachine()
 
 
 end = False
@@ -19,7 +19,7 @@ while end == False:
 	if process.is_resource_sufficient(drink):
 		cost = drink.cost   
 		print(f"{cost} €")
-		check = money.make_payment(cost)
+		check = manu.make_payment(cost)
 
 		if check == True:
 			process.make_coffee(drink)
